@@ -8,941 +8,953 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:hncc_application/models/statusbar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Teams extends StatelessWidget {
-  Teams({
+class TeamsWidget extends StatelessWidget {
+  TeamsWidget({
     Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffecf0f3),
-      body:  ListView(
-        children: [Stack(
-        children: <Widget>[
-          BlendMask(
-            blendMode: BlendMode.overlay,
-            child: Container(
-              width: 375.0,
-              height: 812.0,
-              decoration: BoxDecoration(
-                gradient: RadialGradient(
-                  center: Alignment(0.94, 0.97),
-                  radius: 1.079,
-                  colors: [const Color(0x99ffffff), const Color(0x99000000)],
-                  stops: [0.0, 1.0],
-                  transform: GradientXDTransform(0.005, -1.0, 2.149, 0.011,
-                      -1.152, 1.942, Alignment(0.94, 0.97)),
-                ),
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(100.0, 52.0),
-            child: Text(
-              'Teams',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 32,
-                color: const Color(0xff919ca5),
-                letterSpacing: 0.32,
-                fontWeight: FontWeight.w500,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(20.0, 49.0),
-            child:
-                // Adobe XD layer: 'Up' (component)
-                PageLink(
-              links: [
-                PageLinkInfo(
-                  transition: LinkTransition.Fade,
-                  ease: Curves.easeOut,
-                  duration: 0.3,
-                  pageBuilder: () => Events(),
-                ),
-              ],
-              child: SizedBox(
-                width: 52.0,
-                height: 52.0,
-                child: Up(),
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(41.0, 63.0),
-            child:
-                // Adobe XD layer: 'arrow_back_ios_blac…' (group)
-                SizedBox(
-              width: 24.0,
-              height: 24.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 24.0, 24.0),
-                    size: Size(24.0, 24.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    child: SvgPicture.string(
-                      _svg_eterkn,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 2.1, 11.7, 19.8),
-                    size: Size(24.0, 24.0),
-                    pinLeft: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child: SvgPicture.string(
-                      _svg_59k5j3,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(29.0, 220.0),
-            child: SizedBox(
-              width: 240.0,
-              height: 50.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
-                    size: Size(240.0, 50.0),
-                    pinLeft: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Jhuma Gorai17' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(38.0, 0.0, 50.0, 50.0),
-                    size: Size(240.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Lekden Dorji17' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(76.0, 0.0, 50.0, 50.0),
-                    size: Size(240.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Prakhar Shrivastava…' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(114.0, 0.0, 50.0, 50.0),
-                    size: Size(240.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Shantanu Shubham17' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(152.0, 0.0, 50.0, 50.0),
-                    size: Size(240.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Shubham Jha17' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(190.0, 0.0, 50.0, 50.0),
-                    size: Size(240.0, 50.0),
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Swati Jha17' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(31.0, 397.0),
-            child: SizedBox(
-              width: 279.0,
-              height: 50.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
-                    size: Size(279.0, 50.0),
-                    pinLeft: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Anjani Kumar' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(38.0, 0.0, 50.0, 50.0),
-                    size: Size(279.0, 50.0),
-                    pinLeft: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Anubhaw Sharma' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(76.0, 0.0, 50.0, 50.0),
-                    size: Size(279.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Hanzala-Sohrab' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(115.0, 0.0, 50.0, 50.0),
-                    size: Size(279.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Shekhar-Karmali' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(153.0, 0.0, 50.0, 50.0),
-                    size: Size(279.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Shivam-Anand' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(191.0, 0.0, 50.0, 50.0),
-                    size: Size(279.0, 50.0),
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'suraj-kachhap' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(229.0, 0.0, 50.0, 50.0),
-                    size: Size(279.0, 50.0),
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'suraj-mahto' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(31.0, 586.8),
-            child: SizedBox(
-              width: 241.0,
-              height: 50.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
-                    size: Size(241.0, 50.0),
-                    pinLeft: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Adarsh Sinha' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(38.0, 0.0, 50.0, 50.0),
-                    size: Size(241.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Adarsh-kumar' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(76.0, 0.0, 50.0, 50.0),
-                    size: Size(241.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Rumman Akhtar' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(115.0, 0.0, 50.0, 50.0),
-                    size: Size(241.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Shailesh Aanand' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(153.0, 0.0, 50.0, 50.0),
-                    size: Size(241.0, 50.0),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Sonu-Majhi' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(191.0, 0.0, 50.0, 50.0),
-                    size: Size(241.0, 50.0),
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Waquar-Haseeb' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage(''),
-                          fit: BoxFit.cover,
-                        ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffecf0f3)),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(33.0, 167.0),
-            child: Text(
-              'Our Mentors',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 20,
-                color: const Color(0xff707070),
-                letterSpacing: 0.28,
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(34.0, 347.0),
-            child: Text(
-              'Post Bearer',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 20,
-                color: const Color(0xff707070),
-                letterSpacing: 0.28,
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(34.0, 536.8),
-            child: Text(
-              'Technical Head',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 20,
-                color: const Color(0xff707070),
-                letterSpacing: 0.28,
-                fontWeight: FontWeight.w700,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(34.0, 191.0),
-            child: Text(
-              'Batch 2k17',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 20,
-                color: const Color(0xff7868e6),
-                letterSpacing: 0.2,
-                fontWeight: FontWeight.w500,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(34.0, 371.0),
-            child: Text(
-              'Batch 2k17',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 20,
-                color: const Color(0xff7868e6),
-                letterSpacing: 0.2,
-                fontWeight: FontWeight.w500,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(34.0, 560.8),
-            child: Text(
-              'Batch 2k17',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 20,
-                color: const Color(0xff7868e6),
-                letterSpacing: 0.2,
-                fontWeight: FontWeight.w500,
-              ),
-              textAlign: TextAlign.left,
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(-11.0, 0.0),
-            child:
-                // Adobe XD layer: 'status-bar' (component)
-                SizedBox(
-              width: 398.0,
-              height: 40.0,
-              child: statusbar(),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(28.0, 328.0),
-            child: BlendMask(
-              blendMode: BlendMode.overlay,
-              child: Container(
-                width: 320.0,
-                height: 10.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  gradient: LinearGradient(
-                    begin: Alignment(0.0, -1.0),
-                    end: Alignment(0.0, 1.0),
-                    colors: [const Color(0xffffffff), const Color(0xff000000)],
-                    stops: [0.0, 1.0],
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(28.0, 511.0),
-            child: BlendMask(
-              blendMode: BlendMode.overlay,
-              child: Container(
-                width: 320.0,
-                height: 10.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  gradient: LinearGradient(
-                    begin: Alignment(0.0, -1.0),
-                    end: Alignment(0.0, 1.0),
-                    colors: [const Color(0xffffffff), const Color(0xff000000)],
-                    stops: [0.0, 1.0],
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(28.0, 700.8),
-            child: BlendMask(
-              blendMode: BlendMode.overlay,
-              child: Container(
-                width: 320.0,
-                height: 10.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  gradient: LinearGradient(
-                    begin: Alignment(0.0, -1.0),
-                    end: Alignment(0.0, 1.0),
-                    colors: [const Color(0xffffffff), const Color(0xff000000)],
-                    stops: [0.0, 1.0],
-                  ),
-                ),
-              ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(34.0, 287.8),
-            child: SizedBox(
-              width: 91.0,
-              height: 22.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.7, 20.7, 20.7),
-                    size: Size(91.0, 22.2),
-                    pinLeft: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Icon awesome-linked…' (shape)
-                        SvgPicture.string(
-                      _svg_evjvnl,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(34.0, 2.2, 22.2, 17.8),
-                    size: Size(91.0, 22.2),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Icon feather-mail' (group)
-                        Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 22.2, 17.8),
-                          size: Size(22.2, 17.8),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_waco0j,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 2.2, 22.2, 7.8),
-                          size: Size(22.2, 17.8),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          fixedHeight: true,
-                          child: SvgPicture.string(
-                            _svg_l8oxb3,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
+        backgroundColor: const Color(0xffecf0f3),
+        body: ListView(children: [
+          Stack(
+            children: <Widget>[
+              BlendMask(
+                blendMode: BlendMode.overlay,
+                child: Container(
+                  width: 375.0,
+                  height: 812.0,
+                  decoration: BoxDecoration(
+                    gradient: RadialGradient(
+                      center: Alignment(0.94, 0.97),
+                      radius: 1.079,
+                      colors: [
+                        const Color(0x99ffffff),
+                        const Color(0x99000000)
                       ],
+                      stops: [0.0, 1.0],
+                      transform: GradientXDTransform(0.005, -1.0, 2.149, 0.011,
+                          -1.152, 1.942, Alignment(0.94, 0.97)),
                     ),
                   ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(68.8, 0.0, 22.2, 22.2),
-                    size: Size(91.0, 22.2),
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Icon awesome-github' (shape)
-                        SvgPicture.string(
-                      _svg_4ad5j1,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(34.0, 458.0),
-            child: SizedBox(
-              width: 91.0,
-              height: 22.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.7, 20.7, 20.7),
-                    size: Size(91.0, 22.2),
-                    pinLeft: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Icon awesome-linked…' (shape)
-                        SvgPicture.string(
-                      _svg_evjvnl,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
+              Transform.translate(
+                offset: Offset(100.0, 52.0),
+                child: Text(
+                  'Teams',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 32,
+                    color: const Color(0xff919ca5),
+                    letterSpacing: 0.32,
+                    fontWeight: FontWeight.w500,
                   ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(34.0, 2.2, 22.2, 17.8),
-                    size: Size(91.0, 22.2),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Icon feather-mail' (group)
-                        Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 22.2, 17.8),
-                          size: Size(22.2, 17.8),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_waco0j,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 2.2, 22.2, 7.8),
-                          size: Size(22.2, 17.8),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          fixedHeight: true,
-                          child: SvgPicture.string(
-                            _svg_l8oxb3,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(68.8, 0.0, 22.2, 22.2),
-                    size: Size(91.0, 22.2),
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Icon awesome-github' (shape)
-                        SvgPicture.string(
-                      _svg_4ad5j1,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ],
+                  textAlign: TextAlign.left,
+                ),
               ),
-            ),
-          ),
-          Transform.translate(
-            offset: Offset(34.0, 647.8),
-            child: SizedBox(
-              width: 91.0,
-              height: 22.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.7, 20.7, 20.7),
-                    size: Size(91.0, 22.2),
-                    pinLeft: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Icon awesome-linked…' (shape)
-                        SvgPicture.string(
-                      _svg_evjvnl,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
+              Transform.translate(
+                offset: Offset(20.0, 49.0),
+                child:
+                    // Adobe XD layer: 'Up' (component)
+                    PageLink(
+                  links: [
+                    PageLinkInfo(
+                      transition: LinkTransition.Fade,
+                      ease: Curves.easeOut,
+                      duration: 0.3,
+                      pageBuilder: () => Events(),
                     ),
+                  ],
+                  child: SizedBox(
+                    width: 52.0,
+                    height: 52.0,
+                    child: Up(),
                   ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(34.0, 2.2, 22.2, 17.8),
-                    size: Size(91.0, 22.2),
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Icon feather-mail' (group)
-                        Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 22.2, 17.8),
-                          size: Size(22.2, 17.8),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_waco0j,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 2.2, 22.2, 7.8),
-                          size: Size(22.2, 17.8),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          fixedHeight: true,
-                          child: SvgPicture.string(
-                            _svg_l8oxb3,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(68.8, 0.0, 22.2, 22.2),
-                    size: Size(91.0, 22.2),
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    child:
-                        // Adobe XD layer: 'Icon awesome-github' (shape)
-                        SvgPicture.string(
-                      _svg_4ad5j1,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
+              Transform.translate(
+                offset: Offset(41.0, 63.0),
+                child:
+                    // Adobe XD layer: 'arrow_back_ios_blac…' (group)
+                    SizedBox(
+                  width: 24.0,
+                  height: 24.0,
+                  child: Stack(
+                    children: <Widget>[
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(0.0, 0.0, 24.0, 24.0),
+                        size: Size(24.0, 24.0),
+                        pinLeft: true,
+                        pinRight: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        child: SvgPicture.string(
+                          _svg_eterkn,
+                          allowDrawingOutsideViewBox: true,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(0.0, 2.1, 11.7, 19.8),
+                        size: Size(24.0, 24.0),
+                        pinLeft: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child: SvgPicture.string(
+                          _svg_59k5j3,
+                          allowDrawingOutsideViewBox: true,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(29.0, 220.0),
+                child: SizedBox(
+                  width: 240.0,
+                  height: 50.0,
+                  child: Stack(
+                    children: <Widget>[
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
+                        size: Size(240.0, 50.0),
+                        pinLeft: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Jhuma Gorai17' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(38.0, 0.0, 50.0, 50.0),
+                        size: Size(240.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Lekden Dorji17' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(76.0, 0.0, 50.0, 50.0),
+                        size: Size(240.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Prakhar Shrivastava…' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(114.0, 0.0, 50.0, 50.0),
+                        size: Size(240.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Shantanu Shubham17' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(152.0, 0.0, 50.0, 50.0),
+                        size: Size(240.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Shubham Jha17' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(190.0, 0.0, 50.0, 50.0),
+                        size: Size(240.0, 50.0),
+                        pinRight: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Swati Jha17' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(31.0, 397.0),
+                child: SizedBox(
+                  width: 279.0,
+                  height: 50.0,
+                  child: Stack(
+                    children: <Widget>[
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
+                        size: Size(279.0, 50.0),
+                        pinLeft: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Anjani Kumar' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(38.0, 0.0, 50.0, 50.0),
+                        size: Size(279.0, 50.0),
+                        pinLeft: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Anubhaw Sharma' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(76.0, 0.0, 50.0, 50.0),
+                        size: Size(279.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Hanzala-Sohrab' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(115.0, 0.0, 50.0, 50.0),
+                        size: Size(279.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Shekhar-Karmali' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(153.0, 0.0, 50.0, 50.0),
+                        size: Size(279.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Shivam-Anand' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(191.0, 0.0, 50.0, 50.0),
+                        size: Size(279.0, 50.0),
+                        pinRight: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'suraj-kachhap' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(229.0, 0.0, 50.0, 50.0),
+                        size: Size(279.0, 50.0),
+                        pinRight: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'suraj-mahto' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(31.0, 586.8),
+                child: SizedBox(
+                  width: 241.0,
+                  height: 50.0,
+                  child: Stack(
+                    children: <Widget>[
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(0.0, 0.0, 50.0, 50.0),
+                        size: Size(241.0, 50.0),
+                        pinLeft: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Adarsh Sinha' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(38.0, 0.0, 50.0, 50.0),
+                        size: Size(241.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Adarsh-kumar' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(76.0, 0.0, 50.0, 50.0),
+                        size: Size(241.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Rumman Akhtar' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(115.0, 0.0, 50.0, 50.0),
+                        size: Size(241.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Shailesh Aanand' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(153.0, 0.0, 50.0, 50.0),
+                        size: Size(241.0, 50.0),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Sonu-Majhi' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(191.0, 0.0, 50.0, 50.0),
+                        size: Size(241.0, 50.0),
+                        pinRight: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Waquar-Haseeb' (shape)
+                            Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                                Radius.elliptical(9999.0, 9999.0)),
+                            image: DecorationImage(
+                              image: const AssetImage(''),
+                              fit: BoxFit.cover,
+                            ),
+                            border: Border.all(
+                                width: 4.0, color: const Color(0xffecf0f3)),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(33.0, 167.0),
+                child: Text(
+                  'Our Mentors',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                    color: const Color(0xff707070),
+                    letterSpacing: 0.28,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(34.0, 347.0),
+                child: Text(
+                  'Post Bearer',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                    color: const Color(0xff707070),
+                    letterSpacing: 0.28,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(34.0, 536.8),
+                child: Text(
+                  'Technical Head',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                    color: const Color(0xff707070),
+                    letterSpacing: 0.28,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(34.0, 191.0),
+                child: Text(
+                  'Batch 2k17',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                    color: const Color(0xff7868e6),
+                    letterSpacing: 0.2,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(34.0, 371.0),
+                child: Text(
+                  'Batch 2k17',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                    color: const Color(0xff7868e6),
+                    letterSpacing: 0.2,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(34.0, 560.8),
+                child: Text(
+                  'Batch 2k17',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 20,
+                    color: const Color(0xff7868e6),
+                    letterSpacing: 0.2,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(-11.0, 0.0),
+                child:
+                    // Adobe XD layer: 'status-bar' (component)
+                    SizedBox(
+                  width: 398.0,
+                  height: 40.0,
+                  child: statusbar(),
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(28.0, 328.0),
+                child: BlendMask(
+                  blendMode: BlendMode.overlay,
+                  child: Container(
+                    width: 320.0,
+                    height: 10.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5.0),
+                      gradient: LinearGradient(
+                        begin: Alignment(0.0, -1.0),
+                        end: Alignment(0.0, 1.0),
+                        colors: [
+                          const Color(0xffffffff),
+                          const Color(0xff000000)
+                        ],
+                        stops: [0.0, 1.0],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(28.0, 511.0),
+                child: BlendMask(
+                  blendMode: BlendMode.overlay,
+                  child: Container(
+                    width: 320.0,
+                    height: 10.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5.0),
+                      gradient: LinearGradient(
+                        begin: Alignment(0.0, -1.0),
+                        end: Alignment(0.0, 1.0),
+                        colors: [
+                          const Color(0xffffffff),
+                          const Color(0xff000000)
+                        ],
+                        stops: [0.0, 1.0],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(28.0, 700.8),
+                child: BlendMask(
+                  blendMode: BlendMode.overlay,
+                  child: Container(
+                    width: 320.0,
+                    height: 10.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5.0),
+                      gradient: LinearGradient(
+                        begin: Alignment(0.0, -1.0),
+                        end: Alignment(0.0, 1.0),
+                        colors: [
+                          const Color(0xffffffff),
+                          const Color(0xff000000)
+                        ],
+                        stops: [0.0, 1.0],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(34.0, 287.8),
+                child: SizedBox(
+                  width: 91.0,
+                  height: 22.0,
+                  child: Stack(
+                    children: <Widget>[
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(0.0, 0.7, 20.7, 20.7),
+                        size: Size(91.0, 22.2),
+                        pinLeft: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Icon awesome-linked…' (shape)
+                            SvgPicture.string(
+                          _svg_evjvnl,
+                          allowDrawingOutsideViewBox: true,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(34.0, 2.2, 22.2, 17.8),
+                        size: Size(91.0, 22.2),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Icon feather-mail' (group)
+                            Stack(
+                          children: <Widget>[
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(0.0, 0.0, 22.2, 17.8),
+                              size: Size(22.2, 17.8),
+                              pinLeft: true,
+                              pinRight: true,
+                              pinTop: true,
+                              pinBottom: true,
+                              child: SvgPicture.string(
+                                _svg_waco0j,
+                                allowDrawingOutsideViewBox: true,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(0.0, 2.2, 22.2, 7.8),
+                              size: Size(22.2, 17.8),
+                              pinLeft: true,
+                              pinRight: true,
+                              pinTop: true,
+                              fixedHeight: true,
+                              child: SvgPicture.string(
+                                _svg_l8oxb3,
+                                allowDrawingOutsideViewBox: true,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(68.8, 0.0, 22.2, 22.2),
+                        size: Size(91.0, 22.2),
+                        pinRight: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Icon awesome-github' (shape)
+                            SvgPicture.string(
+                          _svg_4ad5j1,
+                          allowDrawingOutsideViewBox: true,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(34.0, 458.0),
+                child: SizedBox(
+                  width: 91.0,
+                  height: 22.0,
+                  child: Stack(
+                    children: <Widget>[
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(0.0, 0.7, 20.7, 20.7),
+                        size: Size(91.0, 22.2),
+                        pinLeft: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Icon awesome-linked…' (shape)
+                            SvgPicture.string(
+                          _svg_evjvnl,
+                          allowDrawingOutsideViewBox: true,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(34.0, 2.2, 22.2, 17.8),
+                        size: Size(91.0, 22.2),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Icon feather-mail' (group)
+                            Stack(
+                          children: <Widget>[
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(0.0, 0.0, 22.2, 17.8),
+                              size: Size(22.2, 17.8),
+                              pinLeft: true,
+                              pinRight: true,
+                              pinTop: true,
+                              pinBottom: true,
+                              child: SvgPicture.string(
+                                _svg_waco0j,
+                                allowDrawingOutsideViewBox: true,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(0.0, 2.2, 22.2, 7.8),
+                              size: Size(22.2, 17.8),
+                              pinLeft: true,
+                              pinRight: true,
+                              pinTop: true,
+                              fixedHeight: true,
+                              child: SvgPicture.string(
+                                _svg_l8oxb3,
+                                allowDrawingOutsideViewBox: true,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(68.8, 0.0, 22.2, 22.2),
+                        size: Size(91.0, 22.2),
+                        pinRight: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Icon awesome-github' (shape)
+                            SvgPicture.string(
+                          _svg_4ad5j1,
+                          allowDrawingOutsideViewBox: true,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(34.0, 647.8),
+                child: SizedBox(
+                  width: 91.0,
+                  height: 22.0,
+                  child: Stack(
+                    children: <Widget>[
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(0.0, 0.7, 20.7, 20.7),
+                        size: Size(91.0, 22.2),
+                        pinLeft: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Icon awesome-linked…' (shape)
+                            SvgPicture.string(
+                          _svg_evjvnl,
+                          allowDrawingOutsideViewBox: true,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(34.0, 2.2, 22.2, 17.8),
+                        size: Size(91.0, 22.2),
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Icon feather-mail' (group)
+                            Stack(
+                          children: <Widget>[
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(0.0, 0.0, 22.2, 17.8),
+                              size: Size(22.2, 17.8),
+                              pinLeft: true,
+                              pinRight: true,
+                              pinTop: true,
+                              pinBottom: true,
+                              child: SvgPicture.string(
+                                _svg_waco0j,
+                                allowDrawingOutsideViewBox: true,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            Pinned.fromSize(
+                              bounds: Rect.fromLTWH(0.0, 2.2, 22.2, 7.8),
+                              size: Size(22.2, 17.8),
+                              pinLeft: true,
+                              pinRight: true,
+                              pinTop: true,
+                              fixedHeight: true,
+                              child: SvgPicture.string(
+                                _svg_l8oxb3,
+                                allowDrawingOutsideViewBox: true,
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Pinned.fromSize(
+                        bounds: Rect.fromLTWH(68.8, 0.0, 22.2, 22.2),
+                        size: Size(91.0, 22.2),
+                        pinRight: true,
+                        pinTop: true,
+                        pinBottom: true,
+                        fixedWidth: true,
+                        child:
+                            // Adobe XD layer: 'Icon awesome-github' (shape)
+                            SvgPicture.string(
+                          _svg_4ad5j1,
+                          allowDrawingOutsideViewBox: true,
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-    ]));
+        ]));
   }
 }
 
