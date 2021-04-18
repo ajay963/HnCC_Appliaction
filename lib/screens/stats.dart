@@ -41,10 +41,15 @@ class StatsScreen extends StatelessWidget {
                 ]),
                 NuemorphicPieChart(title: 'Varaties at HnCC_', pieDatas: [
                   PieChartSectionData(
-                    value: 34,
-                    color: kMdBlue,
-                  ),
-                  PieChartSectionData(value: 66, color: kDarkBlue)
+                      value: 34,
+                      color: kMdBlue,
+                      title: 'Type A',
+                      showTitle: false),
+                  PieChartSectionData(
+                      value: 66,
+                      color: kDarkBlue,
+                      title: 'Type B',
+                      showTitle: false)
                 ])
               ],
             ),
@@ -81,12 +86,16 @@ class NuemorphicPieChart extends StatelessWidget {
               padding: EdgeInsets.all(10),
               height: _deviceWidth * 0.5,
               width: _deviceWidth * 0.5,
-              child: PieChart(PieChartData(
-                  sections: pieDatas,
-                  pieTouchData: PieTouchData(enabled: true),
-                  startDegreeOffset: -90,
-                  centerSpaceRadius: _deviceWidth * 0.12,
-                  sectionsSpace: 5)),
+              child: PieChart(
+                PieChartData(
+                    sections: pieDatas,
+                    pieTouchData: PieTouchData(enabled: true),
+                    startDegreeOffset: -90,
+                    centerSpaceRadius: _deviceWidth * 0.12,
+                    sectionsSpace: 5),
+                swapAnimationDuration: Duration(milliseconds: 150), // Optional
+                swapAnimationCurve: Curves.linear, // Optional
+              ),
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                       colors: [kLtGrey, Colors.white],
@@ -105,6 +114,28 @@ class NuemorphicPieChart extends StatelessWidget {
                   ]),
             ),
           ),
+          SizedBox(height: 20),
+          for (int index = 0; index < pieDatas.length; index++)
+            Container(
+              child: Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    height: 26,
+                    width: 26,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: pieDatas[index].color),
+                  ),
+                  SizedBox(width: 10),
+                  Text(pieDatas[index].title, style: textTheme.bodyText1),
+                  SizedBox(width: 10),
+                  Text(pieDatas[index].value.floor().toString(),
+                      style: textTheme.bodyText1),
+                ],
+              ),
+            ),
+          SizedBox(height: 20),
+          LineDivider(width: _deviceWidth)
         ],
       ),
     );

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hncc_application/dataModals/DemoData.dart';
-
-import '../views/teams.dart';
+import 'package:hncc_application/dataModals/DataClass.dart';
 import 'buttons.dart';
 
 class LineDivider extends StatelessWidget {
@@ -15,10 +13,10 @@ class LineDivider extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
           backgroundBlendMode: BlendMode.overlay,
-          gradient: LinearGradient(colors: [
-            Colors.black.withOpacity(0.6),
-            Colors.white.withOpacity(0.6)
-          ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+          gradient: LinearGradient(
+              colors: [Colors.black, Colors.white],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter)),
     );
   }
 }
