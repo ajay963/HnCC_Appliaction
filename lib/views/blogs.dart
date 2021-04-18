@@ -7,6 +7,7 @@ import 'package:hncc_application/models/up.dart';
 import './Events.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hncc_application/components/colors.dart';
 
 class Blogs extends StatelessWidget {
   Blogs({

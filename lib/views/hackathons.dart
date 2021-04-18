@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:hncc_application/dataModals/DemoData.dart';
+import 'package:hncc_application/models/DemoData.dart';
 import 'package:hncc_application/widgets/buttons.dart';
 import 'package:hncc_application/widgets/cardsAndBg.dart';
 

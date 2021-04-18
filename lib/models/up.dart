@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import 'package:hncc_application/constants/theme_dart.dart';
+import 'package:hncc_application/components/colors.dart';
 
 class Up extends StatelessWidget {
   Up({
@@ -22,7 +22,7 @@ class Up extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(26.0),
-              color: CustomColors.grey,
+              color: kLtGrey,
               boxShadow: [
                 BoxShadow(
                   color: const Color(0x8097a7c3),

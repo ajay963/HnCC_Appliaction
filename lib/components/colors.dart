@@ -9,3 +9,5 @@ const Color kLtGrey = Color(0xffecf0f3);
 const Color kDarkBlue = Color(0xff7868e6);
 const Color kMdBlue = Color(0xffb8b5ff);
 const Color kLtBlue = Color(0xffe4fbff);
+const Color kLtWhite = Color(0xffffffff);
+const Color kLtBlack = Color(0xff000000);
