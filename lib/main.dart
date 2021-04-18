@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hncc_application/components/themes.dart';
 import 'package:hncc_application/constants/theme_dart.dart';
+import 'package:hncc_application/screens/stats.dart';
 import 'package:hncc_application/views/Login.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class HnccApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'HnCC Application',
         theme: AppThemeData.lightThemeData(context),
-        home: SplashScreen());
+        home: StatsScreen());
   }
 
   Widget _myAppBar() {

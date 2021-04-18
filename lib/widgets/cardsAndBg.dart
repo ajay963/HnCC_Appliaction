@@ -106,22 +106,25 @@ class TeamsCardView extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return Align(
                   widthFactor: 0.7,
-                  child: Container(
-                    height: 50,
-                    width: 50,
-                    // constraints:
-                    //     BoxConstraints(maxHeight: 40, maxWidth: 40),
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: Theme.of(context).backgroundColor,
+                  child: Hero(
+                    tag: teamsData[index].imagUrl,
+                    child: Container(
+                      height: 50,
+                      width: 50,
+                      // constraints:
+                      //     BoxConstraints(maxHeight: 40, maxWidth: 40),
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Theme.of(context).backgroundColor,
+                      ),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: Image(
+                            image: NetworkImage(teamsData[index].imagUrl),
+                            fit: BoxFit.fill,
+                          )),
                     ),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(50),
-                        child: Image(
-                          image: NetworkImage(teamsData[index].imagUrl),
-                          fit: BoxFit.fill,
-                        )),
                   ),
                 );
               }),
