@@ -260,7 +260,7 @@ class NuemorphicPieChart extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          for (int index = 0; index < pieDatas.length; index++)
+          for (var index in pieDatas)
             Container(
               child: Row(
                 children: [
@@ -269,12 +269,12 @@ class NuemorphicPieChart extends StatelessWidget {
                     height: 26,
                     width: 26,
                     decoration: BoxDecoration(
-                        shape: BoxShape.circle, color: pieDatas[index].color),
+                        shape: BoxShape.circle, color: index.color),
                   ),
                   SizedBox(width: 10),
-                  Text(pieDatas[index].title, style: textTheme.bodyText1),
+                  Text(index.title, style: textTheme.bodyText1),
                   SizedBox(width: 10),
-                  Text(pieDatas[index].value.floor().toString(),
+                  Text(index.value.floor().toString(),
                       style: textTheme.bodyText1),
                 ],
               ),
