@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:hncc_application/components/colors.dart';
-import 'package:hncc_application/dataModals/demoText.dart';
+import 'package:hncc_application/models/demoText.dart';
 import 'package:hncc_application/widgets/cardsAndBg.dart';
 
 class StatsScreen extends StatelessWidget {

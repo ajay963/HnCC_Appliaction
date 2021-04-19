@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import 'package:hncc_application/constants/theme_dart.dart';
+import 'package:hncc_application/components/colors.dart';
 
 class UpWhite extends StatelessWidget {
   UpWhite({
@@ -22,10 +22,10 @@ class UpWhite extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(26.0),
-              color: CustomColors.white,
+              color: kLtGrey,
               boxShadow: [
                 BoxShadow(
-                  color:CustomColors.white,
+                  color:kLtWhite,
                   offset: Offset(15, 15),
                   blurRadius: 25,
                 ),
@@ -45,10 +45,10 @@ class UpWhite extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(26.0),
-              color: CustomColors.white,
+              color: kLtWhite,
               boxShadow: [
                 BoxShadow(
-                  color: CustomColors.white,
+                  color: kLtWhite,
                   offset: Offset(-15, -15),
                   blurRadius: 25,
                 ),
@@ -68,7 +68,7 @@ class UpWhite extends StatelessWidget {
               Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(26.0),
-              color: CustomColors.white,
+              color: kLtWhite,
             ),
           ),
         ),

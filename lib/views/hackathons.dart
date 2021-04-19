@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hncc_application/dataModals/DataClass.dart';
+import 'package:hncc_application/models/DataClass.dart';
 import 'package:hncc_application/widgets/cardsAndBg.dart';
 
 class HackathonScreen extends StatelessWidget {

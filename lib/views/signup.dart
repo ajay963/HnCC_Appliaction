@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import 'package:hncc_application/constants/theme_dart.dart';
+import 'package:hncc_application/components/colors.dart';
 import 'package:hncc_application/models/down.dart';
 import 'package:hncc_application/models/up.dart';
 import './events.dart';
@@ -41,7 +41,7 @@ class Signup extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius:
                             BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        color:CustomColors.background,
+                        color:kLtGrey,
                         boxShadow: [
                           BoxShadow(
                             color: const Color(0x8097a7c3),
@@ -65,10 +65,10 @@ class Signup extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius:
                             BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        color: CustomColors.background,
+                        color: kLtGrey,
                         boxShadow: [
                           BoxShadow(
-                            color: CustomColors.white,
+                            color:kLtWhite,
                             offset: Offset(-10, -10),
                             blurRadius: 15,
                           ),
@@ -142,7 +142,7 @@ class Signup extends StatelessWidget {
                 // style: TextStyle(
                 //   fontFamily: 'Segoe UI',
                 //   fontSize: 17,
-                //   color:CustomColors.grey,
+                //   color:kLtGre,
                 //   fontWeight: FontWeight.w600,
                 // ),
                 // textAlign: TextAlign.center,
@@ -175,7 +175,7 @@ class Signup extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Segoe UI',
                   fontSize: 15,
-                  color:CustomColors.darkGrey,
+                  color:kMdGrey,
                   fontWeight: FontWeight.w600,
                 ),
                 textAlign: TextAlign.right,
@@ -227,7 +227,7 @@ class Signup extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Corbel',
                   fontSize: 28,
-                  color: CustomColors.black,
+                  color: kLtBlack,
                   fontWeight: FontWeight.w700,
                 ),
                 textAlign: TextAlign.center,
@@ -251,7 +251,7 @@ class Signup extends StatelessWidget {
                   style: TextStyle(
                     fontFamily: 'Corbel',
                     fontSize: 22,
-                    color: CustomColors.black,
+                    color: kLtBlack,
                     fontWeight: FontWeight.w300,
                   ),
                   textAlign: TextAlign.center,

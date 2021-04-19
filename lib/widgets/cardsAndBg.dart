@@ -2,7 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hncc_application/components/colors.dart';
-import 'package:hncc_application/dataModals/DataClass.dart';
+import 'package:hncc_application/models/DataClass.dart';
 import 'buttons.dart';
 
 class LineDivider extends StatelessWidget {

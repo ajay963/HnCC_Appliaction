@@ -3,7 +3,7 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hncc_application/components/themes.dart';
-import 'package:hncc_application/constants/theme_dart.dart';
+import 'package:hncc_application/components/colors.dart';
 import 'package:hncc_application/screens/stats.dart';
 import 'package:hncc_application/views/Login.dart';
 
@@ -25,14 +25,14 @@ class HnccApp extends StatelessWidget {
     return PreferredSize(
       preferredSize: Size.fromHeight(70),
       child: AppBar(
-        backgroundColor: CustomColors.background,
+        backgroundColor: kLtGrey,
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.only(top: 15, left: 15),
           child: IconButton(
             icon: Icon(
               Icons.menu,
-              color: CustomColors.grey,
+              color: kLtGrey,
               size: 30,
             ),
             onPressed: () => print("Menu Pressed"),
