@@ -1,9 +1,9 @@
 import 'dart:async';
-
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hncc_application/constants/theme_dart.dart';
+import 'package:hncc_application/components/themes.dart';
+import 'package:hncc_application/components/colors.dart';
 import 'package:hncc_application/views/Login.dart';
 
 void main() {
@@ -14,23 +14,24 @@ class HnccApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'HnCC Application',
-      home: SplashScreen());
+        debugShowCheckedModeBanner: false,
+        title: 'HnCC Application',
+        theme: AppThemeData.lightThemeData(context),
+        home: SplashScreen());
   }
 
   Widget _myAppBar() {
     return PreferredSize(
       preferredSize: Size.fromHeight(70),
       child: AppBar(
-        backgroundColor: CustomColors.background,
+        backgroundColor:kLtGrey,
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.only(top: 15, left: 15),
           child: IconButton(
             icon: Icon(
               Icons.menu,
-              color: CustomColors.grey,
+              color: kLtGrey,
               size: 30,
             ),
             onPressed: () => print("Menu Pressed"),
@@ -42,29 +43,30 @@ class HnccApp extends StatelessWidget {
 }
 
 class SplashScreen extends StatefulWidget {
-
   @override
   State createState() => __SplashScreenState();
 }
 
 class __SplashScreenState extends State<SplashScreen> {
-
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    Timer(Duration(seconds: 5),()=>{
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()))
-      });
+    Timer(
+        Duration(seconds: 5),
+        () => {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Login()))
+            });
   }
 
   @override
-  Widget build(BuildContext context){
-    return  Scaffold(
+  Widget build(BuildContext context) {
+    return Scaffold(
       backgroundColor: const Color(0xffecf0f3),
       body: Stack(
         children: <Widget>[
           Transform.translate(
-            offset: Offset(95.0, 377.0),//cartesian positioning from left-top
+            offset: Offset(95.0, 377.0), //cartesian positioning from left-top
             child: SizedBox(
               width: 189.0,
               child: Text(
@@ -82,8 +84,8 @@ class __SplashScreenState extends State<SplashScreen> {
           Transform.translate(
             offset: Offset(-178.0, -124.0),
             child:
-            // Adobe XD layer: 'Circles' (group)
-            SizedBox(
+                // Adobe XD layer: 'Circles' (group)
+                SizedBox(
               width: 796.0,
               height: 1000.0,
               child: Stack(
@@ -95,8 +97,8 @@ class __SplashScreenState extends State<SplashScreen> {
                     fixedWidth: true,
                     fixedHeight: true,
                     child:
-                    // Adobe XD layer: 'Shape' (group)
-                    Stack(
+                        // Adobe XD layer: 'Shape' (group)
+                        Stack(
                       children: <Widget>[
                         Pinned.fromSize(
                           bounds: Rect.fromLTWH(390.0, 0.0, 350.0, 350.0),
@@ -106,8 +108,8 @@ class __SplashScreenState extends State<SplashScreen> {
                           pinTop: true,
                           pinBottom: true,
                           child:
-                          // Adobe XD layer: 'Shape Shadow' (shape)
-                          Container(
+                              // Adobe XD layer: 'Shape Shadow' (shape)
+                              Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(
                                   Radius.elliptical(9999.0, 9999.0)),
@@ -130,8 +132,8 @@ class __SplashScreenState extends State<SplashScreen> {
                           pinTop: true,
                           pinBottom: true,
                           child:
-                          // Adobe XD layer: 'Shape Light' (shape)
-                          Container(
+                              // Adobe XD layer: 'Shape Light' (shape)
+                              Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(
                                   Radius.elliptical(9999.0, 9999.0)),
@@ -157,8 +159,8 @@ class __SplashScreenState extends State<SplashScreen> {
                     fixedWidth: true,
                     fixedHeight: true,
                     child:
-                    // Adobe XD layer: 'Shape' (group)
-                    Stack(
+                        // Adobe XD layer: 'Shape' (group)
+                        Stack(
                       children: <Widget>[
                         Pinned.fromSize(
                           bounds: Rect.fromLTWH(0.0, 0.0, 300.0, 300.0),
@@ -168,8 +170,8 @@ class __SplashScreenState extends State<SplashScreen> {
                           pinTop: true,
                           pinBottom: true,
                           child:
-                          // Adobe XD layer: 'Shape Shadow' (shape)
-                          Container(
+                              // Adobe XD layer: 'Shape Shadow' (shape)
+                              Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(
                                   Radius.elliptical(9999.0, 9999.0)),
@@ -192,8 +194,8 @@ class __SplashScreenState extends State<SplashScreen> {
                           pinTop: true,
                           pinBottom: true,
                           child:
-                          // Adobe XD layer: 'Shape Light' (shape)
-                          Container(
+                              // Adobe XD layer: 'Shape Light' (shape)
+                              Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(
                                   Radius.elliptical(9999.0, 9999.0)),
@@ -219,8 +221,8 @@ class __SplashScreenState extends State<SplashScreen> {
                     fixedWidth: true,
                     fixedHeight: true,
                     child:
-                    // Adobe XD layer: 'Shape' (group)
-                    Stack(
+                        // Adobe XD layer: 'Shape' (group)
+                        Stack(
                       children: <Widget>[
                         Pinned.fromSize(
                           bounds: Rect.fromLTWH(0.0, 80.0, 270.0, 270.0),
@@ -230,8 +232,8 @@ class __SplashScreenState extends State<SplashScreen> {
                           pinTop: true,
                           pinBottom: true,
                           child:
-                          // Adobe XD layer: 'Shape Shadow' (shape)
-                          Container(
+                              // Adobe XD layer: 'Shape Shadow' (shape)
+                              Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(
                                   Radius.elliptical(9999.0, 9999.0)),
@@ -254,8 +256,8 @@ class __SplashScreenState extends State<SplashScreen> {
                           pinTop: true,
                           pinBottom: true,
                           child:
-                          // Adobe XD layer: 'Shape Light' (shape)
-                          Container(
+                              // Adobe XD layer: 'Shape Light' (shape)
+                              Container(
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.all(
                                   Radius.elliptical(9999.0, 9999.0)),
@@ -280,8 +282,8 @@ class __SplashScreenState extends State<SplashScreen> {
           Transform.translate(
             offset: Offset(139.0, 241.0),
             child:
-            // Adobe XD layer: 'hncc-logo' (shape)
-            Container(
+                // Adobe XD layer: 'hncc-logo' (shape)
+                Container(
               width: 98.0,
               height: 98.0,
               decoration: BoxDecoration(
@@ -305,20 +307,22 @@ class _Body extends StatelessWidget {
         child: Container(
       child: Column(
         children: [
-        getImageAsset(),
-          Text('HnCC',
-          style: TextStyle(
-
-          ),)
+          getImageAsset(),
+          Text(
+            'HnCC',
+            style: TextStyle(),
+          )
         ],
       ),
     ));
   }
 }
 
-Widget getImageAsset(){
+Widget getImageAsset() {
   AssetImage assetImage = AssetImage('assets/hncc_logo.png');
-  Image image = Image(image: assetImage,width: 98,height: 98);
+  Image image = Image(image: assetImage, width: 98, height: 98);
 
-  return Container(child: image,);
+  return Container(
+    child: image,
+  );
 }

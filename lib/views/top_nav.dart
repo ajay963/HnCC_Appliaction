@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hncc_application/constants/theme_dart.dart';
+import 'package:hncc_application/components/colors.dart';
 import 'package:hncc_application/models/top_nav.dart';
 
 class TopNavPage extends StatelessWidget{
@@ -11,7 +11,7 @@ class TopNavPage extends StatelessWidget{
   Widget build(BuildContext context) {
     final TextStyle textStyle = Theme.of(context).textTheme.display1;
     return Card(
-      color: CustomColors.white,
+      color:kLtWhite,
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,

@@ -2,10 +2,11 @@
       import 'package:adobe_xd/pinned.dart';
       import 'package:flutter/foundation.dart';
       import 'package:flutter/material.dart';
-      import 'package:hncc_application/constants/theme_dart.dart';
+      import 'package:hncc_application/components/colors.dart';
       import 'package:flutter_svg/flutter_svg.dart';
       import 'package:hncc_application/models/top_nav.dart';
       import 'package:hncc_application/views/slideoutmenu.dart';
+import 'package:hncc_application/views/top_nav.dart';
       import 'eventdetalregister.dart';
 
       class Events extends StatefulWidget {
@@ -40,484 +41,420 @@ class __EventsState extends State<Events>{
             }).toList(),
           ),
           elevation: defaultTargetPlatform == TargetPlatform.android ? 5.0 : 0.0,
-          backgroundColor: CustomColors.accent
+          backgroundColor: kLtWhite
         ),
         drawer: Drawer(
           child: SlideOutMenu(),
         ),
-        backgroundColor: CustomColors.background,
-        body: Stack(
-              children: <Widget>[
-                Transform.translate(
-                  offset: Offset(-1.0, 60.0),
-                  child: Container(
-                    width: 375.0,
-                    height: 692.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(56.0),
-                        topRight: Radius.circular(56.0),
-                      ),
-                      color: CustomColors.white,
-                    ),
-                  ),
-                ),
-                // Transform.translate(
-                //   offset: Offset(282.0, 44.0),
-                //   child:
-                //       // Adobe XD layer: 'Up' (component)
-                //       SizedBox(
-                //     width: 52.0,
-                //     height: 52.0,
-                //     child: Up(),
-                //   ),
-                // ),
-                Transform.translate(
-                  offset: Offset(288.0, 215.0),
-                  child: SizedBox(
-                    width: 129.0,
-                    height: 197.0,
-                    child: Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 129.0, 197.0),
-                          size: Size(129.0, 197.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child:
-                          // Adobe XD layer: '61oZN95sgkL' (shape)
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                image: const AssetImage('assets/codestorm.png'),
-                                fit: BoxFit.cover,
-                                colorFilter: new ColorFilter.mode(
-                                    Colors.black.withOpacity(0.6), BlendMode.dstIn),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(1.8, 1.9, 119.2, 182.5),
-                          size: Size(129.0, 197.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_j6c5zw,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(5.1, 7.7, 119.2, 182.5),
-                          size: Size(129.0, 197.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_wqn3od,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Transform.translate(
-                  offset: Offset(-42.0, 215.0),
-                  child: SizedBox(
-                    width: 129.0,
-                    height: 197.0,
-                    child: Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 129.0, 197.0),
-                          size: Size(129.0, 197.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child:
-                          // Adobe XD layer: '22935795._SY475_' (shape)
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                image: const AssetImage('assets/codestorm.png'),
-                                fit: BoxFit.cover,
-                                colorFilter: new ColorFilter.mode(
-                                    Colors.black.withOpacity(0.6), BlendMode.dstIn),
-                              ),
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(1.8, 1.9, 119.2, 182.5),
-                          size: Size(129.0, 197.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_j6c5zw,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(5.1, 7.7, 119.2, 182.5),
-                          size: Size(129.0, 197.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_wqn3od,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Transform.translate(
-                  offset: Offset(187.0, 200.0),
-                  child: SizedBox(
-                    width: 165.0,
-                    height: 253.0,
-                    child: Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 165.0, 253.0),
-                          size: Size(165.0, 253.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child:
-                          // Adobe XD layer: '410WLQO+q+L' (shape)
-                          Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: const AssetImage('assets/codestorm.png'),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(1.7, 2.5, 153.0, 234.3),
-                          size: Size(165.0, 253.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_akpc23,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(5.9, 9.9, 153.0, 234.3),
-                          size: Size(165.0, 253.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_d7812s,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Divider(),
-                Transform.translate(
-                  offset: Offset(22.0, 200.0),
-                  child: SizedBox(
-                    width: 165.0,
-                    height: 253.0,
-                    child: Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 165.0, 253.0),
-                          size: Size(165.0, 253.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child:
-                          // Adobe XD layer: '71y2wZgkJ6L' (shape)
-                          Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: const AssetImage('assets/codestorm.png'),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(1.7, 2.5, 153.0, 234.3),
-                          size: Size(165.0, 253.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_8peelw,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(5.9, 9.9, 153.0, 234.3),
-                          size: Size(165.0, 253.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: SvgPicture.string(
-                            _svg_a2pp12,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                // Transform.translate(
-                //   offset: Offset(31.0, 614.0),
-                //   child: Container(
-                //     width: 95.0,
-                //     height: 95.0,
-                //     decoration: BoxDecoration(
-                //       image: DecorationImage(
-                //         image: const AssetImage('assets/codestorm.png'),
-                //         fit: BoxFit.cover,
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                // Transform.translate(
-                //   offset: Offset(31.0, 725.0),
-                //   child: Container(
-                //     width: 95.0,
-                //     height: 95.0,
-                //     decoration: BoxDecoration(
-                //       image: DecorationImage(
-                //         image: const AssetImage('assets/codestorm.png'),
-                //         fit: BoxFit.cover,
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                // Transform.translate(
-                //   offset: Offset(140.0, 614.0),
-                //   child: Container(
-                //     width: 95.0,
-                //     height: 95.0,
-                //     decoration: BoxDecoration(
-                //       image: DecorationImage(
-                //         image: const AssetImage('assets/codestorm.png'),
-                //         fit: BoxFit.cover,
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                // Transform.translate(
-                //   offset: Offset(140.0, 725.0),
-                //   child: Container(
-                //     width: 95.0,
-                //     height: 95.0,
-                //     decoration: BoxDecoration(
-                //       image: DecorationImage(
-                //         image: const AssetImage('assets/codestorm.png'),
-                //         fit: BoxFit.cover,
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                // Transform.translate(
-                //   offset: Offset(249.0, 614.0),
-                //   child: Container(
-                //     width: 95.0,
-                //     height: 95.0,
-                //     decoration: BoxDecoration(
-                //       image: DecorationImage(
-                //         image: const AssetImage('assets/codestorm.png'),
-                //         fit: BoxFit.cover,
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                // Transform.translate(
-                //   offset: Offset(249.0, 725.0),
-                //   child: Container(
-                //     width: 95.0,
-                //     height: 95.0,
-                //     decoration: BoxDecoration(
-                //       image: DecorationImage(
-                //         image: const AssetImage('assets/codestorm.png'),
-                //         fit: BoxFit.cover,
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                Transform.translate(
-                  offset: Offset(84.0, 160.0),
-                  child: PageLink(
-                    links: [
-                      PageLinkInfo(
-                        transition: LinkTransition.Fade,
-                        ease: Curves.easeOut,
-                        duration: 0.3,
-                        pageBuilder: () => Eventdetalregister(),
-                      ),
-                    ],
-                    child: SizedBox(
-                      width: 206.0,
-                      height: 317.0,
-                      child: Stack(
-                        children: <Widget>[
-                          Pinned.fromSize(
-                            bounds: Rect.fromLTWH(0.0, 0.0, 206.0, 317.0),
-                            size: Size(206.0, 317.0),
-                            pinLeft: true,
-                            pinRight: true,
-                            pinTop: true,
-                            pinBottom: true,
-                            child:
-                            // Adobe XD layer: '1*Qo27inBKBKY4Q4Pgk…' (shape)
-                            Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: const AssetImage('assets/codestorm.png'),
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Pinned.fromSize(
-                            bounds: Rect.fromLTWH(2.1, 3.3, 191.6, 293.4),
-                            size: Size(206.0, 317.0),
-                            pinLeft: true,
-                            pinRight: true,
-                            pinTop: true,
-                            pinBottom: true,
-                            child: SvgPicture.string(
-                              _svg_93gf3m,
-                              allowDrawingOutsideViewBox: true,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                          Pinned.fromSize(
-                            bounds: Rect.fromLTWH(10.4, 19.7, 191.6, 293.4),
-                            size: Size(206.0, 317.0),
-                            pinLeft: true,
-                            pinRight: true,
-                            pinTop: true,
-                            pinBottom: true,
-                            child: SvgPicture.string(
-                              _svg_ifvvl,
-                              allowDrawingOutsideViewBox: true,
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                Transform.translate(
-                  offset: Offset(38.0, 100.0),
-                  child: Text(
-                    'Ongoing Events',
-                    style: TextStyle(
-                      fontFamily: 'Segoe UI',
-                      fontSize: 24,
-                      color: CustomColors.grey,
-                      fontWeight: FontWeight.w700,
-                    ),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-                // Transform.translate(
-                //   offset: Offset(15,25),
-                //   child: AnimatedContainer(
-                //     duration: Duration(milliseconds: 400),
-                //     width:330,
-                //     height: 42,
-                //     decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.circular(32),
-                //       color: CustomColors.white,
-                //       boxShadow: kElevationToShadow[3],
-                //     ),
-                //     child: Row(
-                //         children: [
-                //           Expanded(
-                //               child: Container(
-                //                 padding: EdgeInsets.only(left: 16),
-                //                 child: !_folded?TextField(
-                //                   decoration: InputDecoration(
-                //                       hintText: "Find past event",
-                //                       hintStyle: TextStyle(
-                //                         color: CustomColors.grey,
-                //                       ),
-                //                       border: InputBorder.none
-                //                   ),
-                //                 ):null
-                //                 ,
-                //               )
-                //           ),
-                //           AnimatedContainer(
-                //               duration: Duration(milliseconds: 400),
-                //               child:Material(
-                //                 type: MaterialType.transparency,
-                //                 child: InkWell(
-                //                   borderRadius: BorderRadius.only(
-                //                       topLeft: Radius.circular(
-                //                           _folded?32:0),
-                //                       topRight:Radius.circular(32),
-                //                       bottomLeft: Radius.circular(_folded?32:0),
-                //                       bottomRight: Radius.circular(32)
-                //                   ),
-                //                   child: Padding(
-                //                     padding: const EdgeInsets.all(16.0),
-                //                     child: Icon(
-                //                       _folded?Icons.search:Icons.close,
-                //                       color: CustomColors.darkGrey,
-                //                     ),
-                //                   ),
-                //                   onTap: (){
-                //                     setState(){
-                //                       _folded = !_folded;
-                //                     };
-                //                   },
-                //                 ),
-                //               )
-                //           ),
-                //         ]),
-                //   ),
-                // ),
-              ],
+        backgroundColor:kLtGrey,
+        body: TabBarView(
+          children: choices.map((TopNav choice) {
+            return Padding(padding: EdgeInsets.all(20.0),
+            child: TopNavPage(
+              choice: choice,
+            ),);
+          }).toList(),
         )
     )));
   }
 }
+
+class OngoingEvents extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+
+    return Stack( children: <Widget>[
+      Transform.translate(
+        offset: Offset(-1.0, 60.0),
+        child: Container(
+          width: 375.0,
+          height: 692.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(56.0),
+              topRight: Radius.circular(56.0),
+            ),
+            color:kLtWhite,
+          ),
+        ),
+      ),
+      // Transform.translate(
+      //   offset: Offset(282.0, 44.0),
+      //   child:
+      //       // Adobe XD layer: 'Up' (component)
+      //       SizedBox(
+      //     width: 52.0,
+      //     height: 52.0,
+      //     child: Up(),
+      //   ),
+      // ),
+      Transform.translate(
+        offset: Offset(288.0, 215.0),
+        child: SizedBox(
+          width: 129.0,
+          height: 197.0,
+          child: Stack(
+            children: <Widget>[
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(0.0, 0.0, 129.0, 197.0),
+                size: Size(129.0, 197.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child:
+                // Adobe XD layer: '61oZN95sgkL' (shape)
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    image: DecorationImage(
+                      image: const AssetImage('assets/codestorm.png'),
+                      fit: BoxFit.cover,
+                      colorFilter: new ColorFilter.mode(
+                          Colors.black.withOpacity(0.6), BlendMode.dstIn),
+                    ),
+                  ),
+                ),
+              ),
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(1.8, 1.9, 119.2, 182.5),
+                size: Size(129.0, 197.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child: SvgPicture.string(
+                  _svg_j6c5zw,
+                  allowDrawingOutsideViewBox: true,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(5.1, 7.7, 119.2, 182.5),
+                size: Size(129.0, 197.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child: SvgPicture.string(
+                  _svg_wqn3od,
+                  allowDrawingOutsideViewBox: true,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      Transform.translate(
+        offset: Offset(-42.0, 215.0),
+        child: SizedBox(
+          width: 129.0,
+          height: 197.0,
+          child: Stack(
+            children: <Widget>[
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(0.0, 0.0, 129.0, 197.0),
+                size: Size(129.0, 197.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child:
+                // Adobe XD layer: '22935795._SY475_' (shape)
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    image: DecorationImage(
+                      image: const AssetImage('assets/codestorm.png'),
+                      fit: BoxFit.cover,
+                      colorFilter: new ColorFilter.mode(
+                          Colors.black.withOpacity(0.6), BlendMode.dstIn),
+                    ),
+                  ),
+                ),
+              ),
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(1.8, 1.9, 119.2, 182.5),
+                size: Size(129.0, 197.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child: SvgPicture.string(
+                  _svg_j6c5zw,
+                  allowDrawingOutsideViewBox: true,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(5.1, 7.7, 119.2, 182.5),
+                size: Size(129.0, 197.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child: SvgPicture.string(
+                  _svg_wqn3od,
+                  allowDrawingOutsideViewBox: true,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      Transform.translate(
+        offset: Offset(187.0, 200.0),
+        child: SizedBox(
+          width: 165.0,
+          height: 253.0,
+          child: Stack(
+            children: <Widget>[
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(0.0, 0.0, 165.0, 253.0),
+                size: Size(165.0, 253.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child:
+                // Adobe XD layer: '410WLQO+q+L' (shape)
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: const AssetImage('assets/codestorm.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(1.7, 2.5, 153.0, 234.3),
+                size: Size(165.0, 253.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child: SvgPicture.string(
+                  _svg_akpc23,
+                  allowDrawingOutsideViewBox: true,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(5.9, 9.9, 153.0, 234.3),
+                size: Size(165.0, 253.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child: SvgPicture.string(
+                  _svg_d7812s,
+                  allowDrawingOutsideViewBox: true,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      Divider(),
+      Transform.translate(
+        offset: Offset(22.0, 200.0),
+        child: SizedBox(
+          width: 165.0,
+          height: 253.0,
+          child: Stack(
+            children: <Widget>[
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(0.0, 0.0, 165.0, 253.0),
+                size: Size(165.0, 253.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child:
+                // Adobe XD layer: '71y2wZgkJ6L' (shape)
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: const AssetImage('assets/codestorm.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(1.7, 2.5, 153.0, 234.3),
+                size: Size(165.0, 253.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child: SvgPicture.string(
+                  _svg_8peelw,
+                  allowDrawingOutsideViewBox: true,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              Pinned.fromSize(
+                bounds: Rect.fromLTWH(5.9, 9.9, 153.0, 234.3),
+                size: Size(165.0, 253.0),
+                pinLeft: true,
+                pinRight: true,
+                pinTop: true,
+                pinBottom: true,
+                child: SvgPicture.string(
+                  _svg_a2pp12,
+                  allowDrawingOutsideViewBox: true,
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      Transform.translate(
+        offset: Offset(84.0, 160.0),
+        child: PageLink(
+          links: [
+            PageLinkInfo(
+              transition: LinkTransition.Fade,
+              ease: Curves.easeOut,
+              duration: 0.3,
+              pageBuilder: () => Eventdetalregister(),
+            ),
+          ],
+          child: SizedBox(
+            width: 206.0,
+            height: 317.0,
+            child: Stack(
+              children: <Widget>[
+                Pinned.fromSize(
+                  bounds: Rect.fromLTWH(0.0, 0.0, 206.0, 317.0),
+                  size: Size(206.0, 317.0),
+                  pinLeft: true,
+                  pinRight: true,
+                  pinTop: true,
+                  pinBottom: true,
+                  child:
+                  // Adobe XD layer: '1*Qo27inBKBKY4Q4Pgk…' (shape)
+                  Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: const AssetImage('assets/codestorm.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+                Pinned.fromSize(
+                  bounds: Rect.fromLTWH(2.1, 3.3, 191.6, 293.4),
+                  size: Size(206.0, 317.0),
+                  pinLeft: true,
+                  pinRight: true,
+                  pinTop: true,
+                  pinBottom: true,
+                  child: SvgPicture.string(
+                    _svg_93gf3m,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Pinned.fromSize(
+                  bounds: Rect.fromLTWH(10.4, 19.7, 191.6, 293.4),
+                  size: Size(206.0, 317.0),
+                  pinLeft: true,
+                  pinRight: true,
+                  pinTop: true,
+                  pinBottom: true,
+                  child: SvgPicture.string(
+                    _svg_ifvvl,
+                    allowDrawingOutsideViewBox: true,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+      Transform.translate(
+        offset: Offset(38.0, 100.0),
+        child: Text(
+          'Ongoing Events',
+          style: TextStyle(
+            fontFamily: 'Segoe UI',
+            fontSize: 24,
+            color: kLtGrey,
+            fontWeight: FontWeight.w700,
+          ),
+          textAlign: TextAlign.left,
+        ),
+      ),
+      // Transform.translate(
+      //   offset: Offset(15,25),
+      //   child: AnimatedContainer(
+      //     duration: Duration(milliseconds: 400),
+      //     width:330,
+      //     height: 42,
+      //     decoration: BoxDecoration(
+      //       borderRadius: BorderRadius.circular(32),
+      //       color: k,
+      //       boxShadow: kElevationToShadow[3],
+      //     ),
+      //     child: Row(
+      //         children: [
+      //           Expanded(
+      //               child: Container(
+      //                 padding: EdgeInsets.only(left: 16),
+      //                 child: !_folded?TextField(
+      //                   decoration: InputDecoration(
+      //                       hintText: "Find past event",
+      //                       hintStyle: TextStyle(
+      //                         color: kLtgrey,
+      //                       ),
+      //                       border: InputBorder.none
+      //                   ),
+      //                 ):null
+      //                 ,
+      //               )
+      //           ),
+      //           AnimatedContainer(
+      //               duration: Duration(milliseconds: 400),
+      //               child:Material(
+      //                 type: MaterialType.transparency,
+      //                 child: InkWell(
+      //                   borderRadius: BorderRadius.only(
+      //                       topLeft: Radius.circular(
+      //                           _folded?32:0),
+      //                       topRight:Radius.circular(32),
+      //                       bottomLeft: Radius.circular(_folded?32:0),
+      //                       bottomRight: Radius.circular(32)
+      //                   ),
+      //                   child: Padding(
+      //                     padding: const EdgeInsets.all(16.0),
+      //                     child: Icon(
+      //                       _folded?Icons.search:Icons.close,
+      //                       color: CustomColors.darkGrey,
+      //                     ),
+      //                   ),
+      //                   onTap: (){
+      //                     setState(){
+      //                       _folded = !_folded;
+      //                     };
+      //                   },
+      //                 ),
+      //               )
+      //           ),
+      //         ]),
+      //   ),
+      // ),
+    ],
+    );
+
+  }}
 
       const String _svg_j6c5zw =
           '<svg viewBox="111.3 240.1 119.2 182.5" ><path transform="translate(-3.27, -4.39)" d="M 114.5691528320313 426.9932861328125 L 114.5691528320313 250.9380493164063 C 114.5691528320313 250.9380493164063 114.8124465942383 244.8651123046875 121.0081481933594 244.4990539550781 C 129.8504791259766 244.4990539550781 233.7425079345703 244.4990539550781 233.7425079345703 244.4990539550781" fill="none" fill-opacity="0.6" stroke="#ffffff" stroke-width="4" stroke-opacity="0.6" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
