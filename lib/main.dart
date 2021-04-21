@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:hncc_application/components/themes.dart';
 import 'package:hncc_application/components/colors.dart';
 import 'package:hncc_application/views/Login.dart';
+import 'package:hncc_application/views/splash.dart';
 
 void main() {
   runApp(HnccApp());
@@ -17,7 +18,8 @@ class HnccApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'HnCC Application',
         theme: AppThemeData.lightThemeData(context),
-        home: SplashScreen());
+        home: Splash()
+    );
   }
 
   Widget _myAppBar() {
