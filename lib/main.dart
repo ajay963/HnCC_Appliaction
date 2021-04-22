@@ -18,10 +18,8 @@ class HnccApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'HnCC Application',
-        theme: AppThemeData.lightThemeData(context);
-        home: Splash()
-    );
-
+        theme: AppThemeData.lightThemeData(context),
+        home: Splash());
   }
 
   Widget _myAppBar() {
