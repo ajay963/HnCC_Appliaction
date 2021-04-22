@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:hncc_application/components/themes.dart';
 import 'package:hncc_application/components/colors.dart';
 import 'package:hncc_application/views/Login.dart';
+<<<<<<< Updated upstream
+=======
+import 'package:hncc_application/views/customlogin.dart';
+>>>>>>> Stashed changes
 
 void main() {
   runApp(HnccApp());
@@ -54,8 +58,8 @@ class __SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 5),
         () => {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Login()))
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CustomLogin()))
             });
   }
 
