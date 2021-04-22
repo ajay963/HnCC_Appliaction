@@ -18,6 +18,7 @@ class _CustomLoginState extends State<CustomLogin> {
         backgroundColor: Theme.of(context).backgroundColor,
         body: NuemorphicBackGround(
             child: SafeArea(
+<<<<<<< HEAD
           child: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Stack(
@@ -120,5 +121,82 @@ class _CustomLoginState extends State<CustomLogin> {
         fontWeight: fontWeight ?? FontWeight.normal,
       ),
     );
+=======
+              child: Stack(
+          children: [
+              Positioned(
+                  top: 181,
+                  left: -253,
+                  child: SplashButton(
+                    height: 755,
+                    width: 755,
+                  )),
+              Positioned(
+                top: 30,
+                right: 100,
+                child: Row(
+                  children: [
+                    getImageAsset(56, 10, 60),
+                    getText(40, 20, 60, "HnCC",'Segoe UI',FontWeight.w300)
+                  ],
+                ),
+              ),
+              Positioned(
+                top: 240,
+                  left: 30,
+                  child: getText(55,0,0,"Welcome",'Corbel',FontWeight.w400)
+              ),
+              Positioned(
+                  top: 305,
+                  left:35,
+                  child: getText(23,0,0,"Let\'s get started",'Segoe UI',FontWeight.w400)
+              ),
+              Positioned(
+                     top: 380,
+                     left: 25,
+                   child:ButtonTapped(
+                     height: 56,
+                     width: 305,
+                     child: SizedBox(
+                     width: 156.0,
+                     child: TextField(
+                         decoration:InputDecoration(
+                           contentPadding: EdgeInsets.only(left: 10,top: 17),
+                           labelText:'Email',
+                           labelStyle: TextStyle(
+                           ),
+                           border: InputBorder.none,
+                         ),
+                         keyboardType: TextInputType.emailAddress,
+                         textInputAction: TextInputAction.done,
+                       ),
+                     )
+                 )
+              ),
+              Positioned(
+                top: 490,
+                left: 25,
+                child:ButtonTapped(
+                    height: 56,
+                    width: 305,
+                    child:  SizedBox(
+                      width: 156.0,
+                      child: TextField(
+                        decoration:InputDecoration(
+                          contentPadding: EdgeInsets.only(left: 10,top: 17),
+                          labelText:'Password',
+                          border: InputBorder.none,
+                        ),
+                        keyboardType: TextInputType.emailAddress,
+                        textInputAction: TextInputAction.done,
+                      ),
+                    )
+                ),
+              ),
+
+          ],
+        ),
+            )));
+>>>>>>> 6ed494420cb27203f72660218704274d71568b7e
   }
 }

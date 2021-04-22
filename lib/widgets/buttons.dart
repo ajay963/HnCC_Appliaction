@@ -19,6 +19,10 @@ class NuemorphicsCircularButton extends StatelessWidget {
             shape: BoxShape.circle,
             // borderRadius: BorderRadius.circular(20),
             color: kLtGrey,
+            gradient: LinearGradient(
+                colors: [Colors.white, kLtGrey],
+                begin: Alignment.bottomRight,
+                end: Alignment.topLeft),
             boxShadow: [
               BoxShadow(
                   color: Colors.white.withOpacity(0.95),

@@ -4,11 +4,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hncc_application/components/themes.dart';
 import 'package:hncc_application/components/colors.dart';
+import 'package:hncc_application/screens/stats.dart';
 import 'package:hncc_application/views/Login.dart';
-<<<<<<< Updated upstream
-=======
+
 import 'package:hncc_application/views/customlogin.dart';
->>>>>>> Stashed changes
+
+import 'package:hncc_application/views/splash.dart';
 
 void main() {
   runApp(HnccApp());
@@ -21,7 +22,7 @@ class HnccApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'HnCC Application',
         theme: AppThemeData.lightThemeData(context),
-        home: SplashScreen());
+        home: Splash());
   }
 
   Widget _myAppBar() {
@@ -304,29 +305,46 @@ class __SplashScreenState extends State<SplashScreen> {
   }
 }
 
-class _Body extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-      child: Column(
-        children: [
-          getImageAsset(),
-          Text(
-            'HnCC',
-            style: TextStyle(),
-          )
-        ],
-      ),
-    ));
-  }
-}
+// class _Body extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Center(
+//         child: Container(
+//       child: Column(
+//         children: [
+//           getImageAsset(),
+//           Text(
+//             'HnCC',
+//             style: TextStyle(),
+//           )
+//         ],
+//       ),
+//     ));
+//   }
+// }
 
-Widget getImageAsset() {
+Widget getImageAsset(double size, double xPos, double yPos) {
   AssetImage assetImage = AssetImage('assets/hncc_logo.png');
-  Image image = Image(image: assetImage, width: 98, height: 98);
+  Image image = Image(image: assetImage, width: size, height: size);
 
   return Container(
     child: image,
+    transform: Matrix4.translationValues(xPos, yPos, 0),
+  );
+}
+
+Widget getText(double size, double xPos, double yPos, String text, String font,
+    FontWeight weight) {
+  return Container(
+    child: Text(
+      text,
+      style: TextStyle(
+        fontFamily: font,
+        fontSize: size,
+        color: const Color(0xff1c2f51),
+        fontWeight: weight,
+      ),
+    ),
+    transform: Matrix4.translationValues(xPos, yPos, 0),
   );
 }
