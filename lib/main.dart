@@ -24,7 +24,7 @@ class HnccApp extends StatelessWidget {
     return PreferredSize(
       preferredSize: Size.fromHeight(70),
       child: AppBar(
-        backgroundColor:kLtGrey,
+        backgroundColor: kLtGrey,
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.only(top: 15, left: 15),
