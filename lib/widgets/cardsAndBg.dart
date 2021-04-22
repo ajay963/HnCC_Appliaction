@@ -1,8 +1,8 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hncc_application/models/DemoData.dart';
-import 'package:hncc_application/widgets/spalshButton.dart';
-
+import 'package:hncc_application/components/colors.dart';
+import 'package:hncc_application/models/DataClass.dart';
 import '../views/teams.dart';
 import 'buttons.dart';
 
@@ -16,10 +16,10 @@ class LineDivider extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
           backgroundBlendMode: BlendMode.overlay,
-          gradient: LinearGradient(colors: [
-            Colors.black.withOpacity(0.6),
-            Colors.white.withOpacity(0.6)
-          ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+          gradient: LinearGradient(
+              colors: [Colors.black, Colors.white],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter)),
     );
   }
 }
@@ -107,22 +107,25 @@ class TeamsCardView extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return Align(
                   widthFactor: 0.7,
-                  child: Container(
-                    height: 50,
-                    width: 50,
-                    // constraints:
-                    //     BoxConstraints(maxHeight: 40, maxWidth: 40),
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: Theme.of(context).backgroundColor,
+                  child: Hero(
+                    tag: teamsData[index].imagUrl,
+                    child: Container(
+                      height: 50,
+                      width: 50,
+                      // constraints:
+                      //     BoxConstraints(maxHeight: 40, maxWidth: 40),
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Theme.of(context).backgroundColor,
+                      ),
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: Image(
+                            image: NetworkImage(teamsData[index].imagUrl),
+                            fit: BoxFit.fill,
+                          )),
                     ),
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(50),
-                        child: Image(
-                          image: NetworkImage(teamsData[index].imagUrl),
-                          fit: BoxFit.fill,
-                        )),
                   ),
                 );
               }),
@@ -197,6 +200,88 @@ class HackathonCardsView extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10),
+        ],
+      ),
+    );
+  }
+}
+
+class NuemorphicPieChart extends StatelessWidget {
+  final List<PieChartSectionData> pieDatas;
+  final String title;
+  NuemorphicPieChart({@required this.pieDatas, @required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
+
+    final double _deviceWidth = MediaQuery.of(context).size.width;
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: textTheme.headline2,
+          ),
+          SizedBox(height: 40),
+          Center(
+            child: Container(
+              padding: EdgeInsets.all(10),
+              height: _deviceWidth * 0.5,
+              width: _deviceWidth * 0.5,
+              child: PieChart(
+                PieChartData(
+                    sections: pieDatas,
+                    pieTouchData: PieTouchData(enabled: true),
+                    startDegreeOffset: -90,
+                    centerSpaceRadius: _deviceWidth * 0.12,
+                    sectionsSpace: 5),
+                swapAnimationDuration: Duration(milliseconds: 150), // Optional
+                swapAnimationCurve: Curves.linear, // Optional
+              ),
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: [kLtGrey, Colors.white],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight),
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                        color: kMdGrey.withOpacity(0.5),
+                        offset: Offset(10, 10),
+                        blurRadius: 24),
+                    BoxShadow(
+                        color: Colors.white.withOpacity(1),
+                        offset: Offset(-10, -10),
+                        blurRadius: 24)
+                  ]),
+            ),
+          ),
+          SizedBox(height: 20),
+          for (var index in pieDatas)
+            Container(
+              child: Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    height: 26,
+                    width: 26,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: index.color),
+                  ),
+                  SizedBox(width: 10),
+                  Text(index.title, style: textTheme.bodyText1),
+                  SizedBox(width: 10),
+                  Text(index.value.floor().toString(),
+                      style: textTheme.bodyText1),
+                ],
+              ),
+            ),
+          SizedBox(height: 20),
+          LineDivider(width: _deviceWidth)
         ],
       ),
     );

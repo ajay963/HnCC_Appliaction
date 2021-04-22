@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hncc_application/components/themes.dart';
 import 'package:hncc_application/components/colors.dart';
+import 'package:hncc_application/screens/stats.dart';
 import 'package:hncc_application/views/Login.dart';
 import 'package:hncc_application/views/splash.dart';
 
@@ -18,15 +19,14 @@ class HnccApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'HnCC Application',
         theme: AppThemeData.lightThemeData(context),
-        home: Splash()
-    );
+        home: Splash());
   }
 
   Widget _myAppBar() {
     return PreferredSize(
       preferredSize: Size.fromHeight(70),
       child: AppBar(
-        backgroundColor:kLtGrey,
+        backgroundColor: kLtGrey,
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.only(top: 15, left: 15),
