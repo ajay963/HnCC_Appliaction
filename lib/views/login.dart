@@ -15,14 +15,16 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color(0xffecf0f3),
-        body: ListView(
-            children: [Stack(
+        body: SingleChildScrollView(
+          physics: BouncingScrollPhysics(),
+          child: Column(children: [
+            Stack(
               children: <Widget>[
                 Transform.translate(
                   offset: Offset(-253.0, 150.0),
                   child:
-                  // Adobe XD layer: 'Shape' (group)
-                  SizedBox(
+                      // Adobe XD layer: 'Shape' (group)
+                      SizedBox(
                     width: 755.0,
                     height: 755.0,
                     child: Stack(
@@ -35,12 +37,12 @@ class Login extends StatelessWidget {
                           pinTop: true,
                           pinBottom: true,
                           child:
-                          // Adobe XD layer: 'Shape Shadow' (shape)
-                          Container(
+                              // Adobe XD layer: 'Shape Shadow' (shape)
+                              Container(
                             decoration: BoxDecoration(
-                              borderRadius:
-                              BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                              color:kLtGrey,
+                              borderRadius: BorderRadius.all(
+                                  Radius.elliptical(9999.0, 9999.0)),
+                              color: kLtGrey,
                               boxShadow: [
                                 BoxShadow(
                                   color: const Color(0x8097a7c3),
@@ -59,11 +61,11 @@ class Login extends StatelessWidget {
                           pinTop: true,
                           pinBottom: true,
                           child:
-                          // Adobe XD layer: 'Shape Light' (shape)
-                          Container(
+                              // Adobe XD layer: 'Shape Light' (shape)
+                              Container(
                             decoration: BoxDecoration(
-                              borderRadius:
-                              BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
+                              borderRadius: BorderRadius.all(
+                                  Radius.elliptical(9999.0, 9999.0)),
                               color: kLtGrey,
                               boxShadow: [
                                 BoxShadow(
@@ -113,8 +115,8 @@ class Login extends StatelessWidget {
                 Transform.translate(
                   offset: Offset(10.0, 328.0),
                   child:
-                  // Adobe XD layer: 'Down' (component)
-                  SizedBox(
+                      // Adobe XD layer: 'Down' (component)
+                      SizedBox(
                     width: 323.0,
                     height: 56.0,
                     child: Up(),
@@ -123,8 +125,8 @@ class Login extends StatelessWidget {
                 Transform.translate(
                   offset: Offset(10.0, 407.0),
                   child:
-                  // Adobe XD layer: 'Down' (component)
-                  SizedBox(
+                      // Adobe XD layer: 'Down' (component)
+                      SizedBox(
                     width: 323.0,
                     height: 56.0,
                     child: Up(),
@@ -135,8 +137,8 @@ class Login extends StatelessWidget {
                     child: SizedBox(
                       width: 156.0,
                       child: TextField(
-                        decoration:InputDecoration(
-                          labelText:'Email',
+                        decoration: InputDecoration(
+                          labelText: 'Email',
                           border: InputBorder.none,
                           // style: TextStyle(
                           //   fontFamily: 'Segoe UI',
@@ -154,11 +156,10 @@ class Login extends StatelessWidget {
                   offset: Offset(37, 406.0),
                   child: SizedBox(
                     width: 156.0,
-                    child:TextField(
-                      decoration:InputDecoration(
-                        labelText:'Password',
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Password',
                         border: InputBorder.none,
-
                       ),
                       obscureText: true,
                       textInputAction: TextInputAction.done,
@@ -174,7 +175,7 @@ class Login extends StatelessWidget {
                       style: TextStyle(
                         fontFamily: 'Segoe UI',
                         fontSize: 15,
-                        color:kMdGrey,
+                        color: kMdGrey,
                         fontWeight: FontWeight.w600,
                       ),
                       textAlign: TextAlign.left,
@@ -200,8 +201,8 @@ class Login extends StatelessWidget {
                 Transform.translate(
                   offset: Offset(81.0, 569.0),
                   child:
-                  // Adobe XD layer: 'Up' (component)
-                  PageLink(
+                      // Adobe XD layer: 'Up' (component)
+                      PageLink(
                     links: [
                       PageLinkInfo(
                         ease: Curves.easeOut,
@@ -260,8 +261,8 @@ class Login extends StatelessWidget {
                 Transform.translate(
                   offset: Offset(280.0, 422.0),
                   child:
-                  // Adobe XD layer: 'visibility_off_blac…' (group)
-                  SizedBox(
+                      // Adobe XD layer: 'visibility_off_blac…' (group)
+                      SizedBox(
                     width: 24.0,
                     height: 24.0,
                     child: Stack(
@@ -299,8 +300,8 @@ class Login extends StatelessWidget {
                 Transform.translate(
                   offset: Offset(105.0, 53.0),
                   child:
-                  // Adobe XD layer: 'hncc-logo' (shape)
-                  Container(
+                      // Adobe XD layer: 'hncc-logo' (shape)
+                      Container(
                     width: 56.0,
                     height: 56.0,
                     decoration: BoxDecoration(
@@ -313,7 +314,8 @@ class Login extends StatelessWidget {
                 ),
               ],
             ),
-            ]));
+          ]),
+        ));
   }
 }
 
