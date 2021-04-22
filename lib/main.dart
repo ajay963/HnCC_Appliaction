@@ -13,6 +13,7 @@ void main() {
 }
 
 class HnccApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -302,29 +303,45 @@ class __SplashScreenState extends State<SplashScreen> {
   }
 }
 
-class _Body extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-      child: Column(
-        children: [
-          getImageAsset(),
-          Text(
-            'HnCC',
-            style: TextStyle(),
-          )
-        ],
-      ),
-    ));
-  }
-}
+// class _Body extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Center(
+//         child: Container(
+//       child: Column(
+//         children: [
+//           getImageAsset(),
+//           Text(
+//             'HnCC',
+//             style: TextStyle(),
+//           )
+//         ],
+//       ),
+//     ));
+//   }
+// }
 
-Widget getImageAsset() {
+Widget getImageAsset(double size, double xPos, double yPos) {
   AssetImage assetImage = AssetImage('assets/hncc_logo.png');
-  Image image = Image(image: assetImage, width: 98, height: 98);
+  Image image = Image(image: assetImage, width: size, height: size);
 
   return Container(
     child: image,
+    transform: Matrix4.translationValues(xPos, yPos, 0),
+  );
+}
+
+Widget getTextHncc(double size, double xPos, double yPos){
+  return Container(
+      child: Text(
+    'HnCC',
+    style: TextStyle(
+      fontFamily: 'Segoe UI',
+      fontSize: size,
+      color: const Color(0xff1c2f51),
+      fontWeight: FontWeight.w300,
+    ),
+     ),
+      transform: Matrix4.translationValues(xPos, yPos, 0),
   );
 }
