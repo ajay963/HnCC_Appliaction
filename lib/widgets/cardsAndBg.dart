@@ -36,7 +36,7 @@ class NuemorphicBackGround extends StatelessWidget {
         decoration: BoxDecoration(
             backgroundBlendMode: BlendMode.overlay,
             gradient: LinearGradient(colors: [
-              Colors.black.withOpacity(0.9),
+              Colors.black.withOpacity(0.5),
               Colors.white.withOpacity(0.9)
             ], begin: Alignment.topLeft, end: Alignment.bottomRight)),
       ),

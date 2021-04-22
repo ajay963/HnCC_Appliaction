@@ -331,15 +331,15 @@ Widget getImageAsset(double size, double xPos, double yPos) {
   );
 }
 
-Widget getTextHncc(double size, double xPos, double yPos){
+Widget getText(double size, double xPos, double yPos, String text,String font,FontWeight weight){
   return Container(
       child: Text(
-    'HnCC',
+    text,
     style: TextStyle(
-      fontFamily: 'Segoe UI',
+      fontFamily: font,
       fontSize: size,
       color: const Color(0xff1c2f51),
-      fontWeight: FontWeight.w300,
+      fontWeight: weight,
     ),
      ),
       transform: Matrix4.translationValues(xPos, yPos, 0),

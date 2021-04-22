@@ -67,7 +67,7 @@ class _SplashState extends State<Splash> {
                     SizedBox(
                       height: 20,
                     ),
-                   getTextHncc(65,0,0)
+                   getText(65,0,0,"HnCC",'Segoe UI',FontWeight.w300)
                   ],
                 ),
               )
