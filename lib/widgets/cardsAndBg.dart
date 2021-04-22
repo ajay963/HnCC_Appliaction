@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hncc_application/components/colors.dart';
 import 'package:hncc_application/models/DataClass.dart';
+import '../views/teams.dart';
 import 'buttons.dart';
 
 class LineDivider extends StatelessWidget {
@@ -25,7 +26,7 @@ class LineDivider extends StatelessWidget {
 
 class NuemorphicBackGround extends StatelessWidget {
   final Widget child;
-  NuemorphicBackGround({@required this.child});
+  NuemorphicBackGround( {@required this.child});
   Widget build(BuildContext context) {
     final Size deviceSize = MediaQuery.of(context).size;
     return Stack(children: [
