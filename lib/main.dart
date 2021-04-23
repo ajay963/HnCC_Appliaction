@@ -6,6 +6,9 @@ import 'package:hncc_application/components/themes.dart';
 import 'package:hncc_application/components/colors.dart';
 import 'package:hncc_application/screens/stats.dart';
 import 'package:hncc_application/views/Login.dart';
+
+import 'package:hncc_application/views/customlogin.dart';
+
 import 'package:hncc_application/views/splash.dart';
 
 void main() {
@@ -13,7 +16,6 @@ void main() {
 }
 
 class HnccApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -57,8 +59,8 @@ class __SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 5),
         () => {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Login()))
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CustomLogin()))
             });
   }
 
@@ -331,17 +333,18 @@ Widget getImageAsset(double size, double xPos, double yPos) {
   );
 }
 
-Widget getText(double size, double xPos, double yPos, String text,String font,FontWeight weight){
+Widget getText(double size, double xPos, double yPos, String text, String font,
+    FontWeight weight) {
   return Container(
-      child: Text(
-    text,
-    style: TextStyle(
-      fontFamily: font,
-      fontSize: size,
-      color: const Color(0xff1c2f51),
-      fontWeight: weight,
+    child: Text(
+      text,
+      style: TextStyle(
+        fontFamily: font,
+        fontSize: size,
+        color: const Color(0xff1c2f51),
+        fontWeight: weight,
+      ),
     ),
-     ),
-      transform: Matrix4.translationValues(xPos, yPos, 0),
+    transform: Matrix4.translationValues(xPos, yPos, 0),
   );
 }
