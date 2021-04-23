@@ -336,15 +336,16 @@ Widget getImageAsset(double size, double xPos, double yPos) {
 Widget getText(double size, double xPos, double yPos, String text, String font,
     FontWeight weight) {
   return Container(
-    child: Text(
-      text,
-      style: TextStyle(
-        fontFamily: font,
-        fontSize: size,
-        color: const Color(0xff1c2f51),
-        fontWeight: weight,
+      child: Text(
+        text,
+        style: TextStyle(
+          fontFamily: font,
+          fontSize: size,
+          color: const Color(0xff1c2f51),
+          fontWeight: weight,
+        ),
       ),
-    ),
-    transform: Matrix4.translationValues(xPos, yPos, 0),
+      transform: Matrix4.translationValues(xPos, yPos, 0),
+
   );
 }

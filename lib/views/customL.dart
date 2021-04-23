@@ -6,12 +6,12 @@ import 'package:hncc_application/widgets/spalshButton.dart';
 
 import '../main.dart';
 
-class CustomLogin extends StatefulWidget {
+class CustomLogin1 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _CustomLoginState();
 }
 
-class _CustomLoginState extends State<CustomLogin> {
+class _CustomLoginState extends State<CustomLogin1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +26,8 @@ class _CustomLoginState extends State<CustomLogin> {
                       child: SplashButton(
                         height: 755,
                         width: 755,
-                      )),
+                      )
+                  ),
                   Positioned(
                     top: 30,
                     right: 100,
@@ -86,7 +87,7 @@ class _CustomLoginState extends State<CustomLogin> {
                                 border: InputBorder.none,
 
                               ),
-                              keyboardType: TextInputType.emailAddress,
+                              keyboardType: TextInputType.visiblePassword,
                               textInputAction: TextInputAction.done,
                             ),
                             trailing: Icon(
@@ -104,13 +105,13 @@ class _CustomLoginState extends State<CustomLogin> {
   }
 }
 
-class CustomSignup extends StatefulWidget{
+class CustomSignup1 extends StatefulWidget{
   @override
   State<StatefulWidget> createState() => _CustomSignupState();
 
 }
 
-class _CustomSignupState extends State<CustomLogin> {
+class _CustomSignupState extends State<CustomSignup1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

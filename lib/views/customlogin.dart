@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hncc_application/components/colors.dart';
 import 'package:hncc_application/widgets/cardsAndBg.dart';
 import 'package:hncc_application/widgets/spalshButton.dart';
 
@@ -11,24 +10,28 @@ class CustomLogin extends StatefulWidget {
   State<StatefulWidget> createState() => _CustomLoginState();
 }
 
-class _CustomLoginState extends State<CustomLogin> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
-        body: NuemorphicBackGround(
-            child: SingleChildScrollView(
-          child: SafeArea(
+class _CustomLoginState extends State<CustomLogin> {@override
+Widget build(BuildContext context) {
+  return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
+      body: NuemorphicBackGround(
+        child: SingleChildScrollView(
+          child: Container(
+            height: 800,
+            width: 500,
             child: Stack(
               children: [
-                SplashButton(
-                  xPos: -253,
-                  yPos: 181,
-                  height: 755,
-                  width: 755,
+                Positioned(
+                    top: 181,
+                    left: -350,
+                    child: SplashButton(
+                      height: 955,
+                      width: 955,
+                    )
                 ),
+
                 Transform.translate(
-                  offset: Offset(100, 30),
+                  offset: Offset(100, 20),
                   child: Row(
                     children: [
                       getImageAsset(56, 10, 60),
@@ -37,26 +40,25 @@ class _CustomLoginState extends State<CustomLogin> {
                   ),
                 ),
                 Transform.translate(
-                    offset: Offset(30, 240),
+                    offset: Offset(30, 230),
                     child: getText(
                         55, 0, 0, "Welcome", 'Corbel', FontWeight.w400)),
                 Transform.translate(
-                    offset: Offset(35, 305),
+                    offset: Offset(35, 295),
                     child: getText(23, 0, 0, "Let\'s get started", 'Segoe UI',
                         FontWeight.w400)),
                 Transform.translate(
-                    offset: Offset(25, 490),
+                    offset: Offset(25, 370),
                     child: ButtonTapped(
                         height: 56,
                         width: 305,
                         child: SizedBox(
-                          width: 156.0,
+                          width: 300.0,
                           child: TextField(
                             decoration: InputDecoration(
                               contentPadding:
-                                  EdgeInsets.only(left: 10, top: 17),
-                              labelText: 'Email',
-                              labelStyle: TextStyle(),
+                              EdgeInsets.only(left: 25, top: 17),
+                              labelText: 'your email here',
                               border: InputBorder.none,
                             ),
                             keyboardType: TextInputType.emailAddress,
@@ -64,95 +66,68 @@ class _CustomLoginState extends State<CustomLogin> {
                           ),
                         ))),
                 Transform.translate(
-                  offset: Offset(25, 590),
+                  offset: Offset(25, 465),
                   child: ButtonTapped(
                       height: 56,
                       width: 305,
                       child: SizedBox(
-                        width: 156.0,
-                        child: TextField(
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.only(left: 10, top: 17),
-                            labelText: 'Password',
-                            border: InputBorder.none,
-                          ),
-                          keyboardType: TextInputType.emailAddress,
-                          textInputAction: TextInputAction.done,
+                        width: 300.0,
+                        child: ListTile(
+                            title: TextField(
+                              decoration: InputDecoration(
+                                contentPadding: EdgeInsets.only(left: 10, top: 17),
+                                labelText: 'your password here',
+                                border: InputBorder.none,
+                              ),
+                              keyboardType: TextInputType.visiblePassword,
+                              textInputAction: TextInputAction.done,
+                            ),
+                            trailing: Icon(
+                              Icons.remove_red_eye,
+                            )
                         ),
                       )),
                 ),
+                Transform.translate(
+                    offset: Offset(25, 535),
+                    child: getText(15, 0, 0, "Forgot password", 'Segoe UI',
+                        FontWeight.w300)
+                ),
+                Transform.translate(
+                    offset: Offset(90, 630),
+                    child: InkWell(
+                      child: SplashButton(
+                        height: 62,
+                        width: 195,
+                        child: getText(28, 37, 0, "Sign in", 'Corbel',
+                            FontWeight.w500),
+                      ),
+                      onTap: (){
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => CustomLogin())
+                        );
+                      },
+                    ),
+                ),
+                Transform.translate(
+                  offset: Offset(90, 710),
+                  child:  InkWell(
+                    onTap: (){
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => CustomSignup())
+                      );
+                    },
+                    child: getText(24, 40, 0, "Sign up", 'Corbel',
+                        FontWeight.w300),
+                  ),
+                )
               ],
             ),
           ),
-        )));
-=======
-//               ),
-//               Positioned(
-//                 top: 240,
-//                   left: 30,
-//                   child: getText(55,0,0,"Welcome",'Corbel',FontWeight.w400)
-//               ),
-//               Positioned(
-//                   top: 305,
-//                   left:35,
-//                   child: getText(23,0,0,"Let\'s get started",'Segoe UI',FontWeight.w400)
-//               ),
-//               Positioned(
-//                      top: 380,
-//                      left: 25,
-//                    child:ButtonTapped(
-//                      height: 56,
-//                      width: 305,
-//                      child: SizedBox(
-//                      width: 300.0,
-//                      child:  TextField(
-//                                decoration:InputDecoration(
-//                                  contentPadding: EdgeInsets.only(left:25,top: 17),
-//                                  labelText:'Email',
-//                                  border: InputBorder.none,
-//                                ),
-//                                keyboardType: TextInputType.emailAddress,
-//                                textInputAction: TextInputAction.done,
-//                              ),
-
-
-//                      )
-//                  )
-//               ),
-//               Positioned(
-//                 top: 490,
-//                 left: 25,
-//                 child:ButtonTapped(
-//                     height: 56,
-//                     width: 305,
-//                     child:  SizedBox(
-//                       width: 300.0,
-//                        child:
-//                           ListTile(
-//                               title: TextField(
-//                               decoration:InputDecoration(
-//                                 contentPadding: EdgeInsets.only(left: 10,top: 17),
-//                                 labelText:'Password',
-//                                 border: InputBorder.none,
-
-//                               ),
-//                               keyboardType: TextInputType.emailAddress,
-//                               textInputAction: TextInputAction.done,
-//                         ),
-//                             trailing: Icon(
-//                                 Icons.remove_red_eye,
-//                             )
-//                             ,
-//                           ),
-//                       ),
-//                     )
-//                 ),
-
-//           ],
-//         ),
-//             )));
-
-  }
+        ),
+      )
+  );
+}
 }
 
 class CustomSignup extends StatefulWidget{
@@ -161,87 +136,131 @@ class CustomSignup extends StatefulWidget{
 
 }
 
-class _CustomSignupState extends State<CustomLogin> {
-  @override
+class _CustomSignupState extends State<CustomSignup> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
         body: NuemorphicBackGround(
-            child: SafeArea(
+          child: SingleChildScrollView(
+            child: Container(
+              height: 800,
+              width: 500,
               child: Stack(
                 children: [
                   Positioned(
                       top: 181,
-                      left: -253,
+                      left: -350,
                       child: SplashButton(
-                        height: 755,
-                        width: 755,
-                      )),
-                  Positioned(
-                    top: 30,
-                    right: 100,
+                        height: 955,
+                        width: 955,
+                      )
+                  ),
+
+                  Transform.translate(
+                    offset: Offset(100, 20),
                     child: Row(
                       children: [
                         getImageAsset(56, 10, 60),
-                        getText(40, 20, 60, "HnCC",'Segoe UI',FontWeight.w300)
+                        getText(40, 20, 60, "HnCC", 'Segoe UI', FontWeight.w300)
                       ],
                     ),
                   ),
-                  Positioned(
-                      top: 240,
-                      left: 30,
-                      child: getText(55,0,0,"Welcome",'Corbel',FontWeight.w400)
-                  ),
-                  Positioned(
-                      top: 305,
-                      left:35,
-                      child: getText(23,0,0,"Let\'s get started",'Segoe UI',FontWeight.w400)
-                  ),
-                  Positioned(
-                      top: 380,
-                      left: 25,
-                      child:ButtonTapped(
+                  Transform.translate(
+                      offset: Offset(30, 230),
+                      child: getText(
+                          55, 0, 0, "Welcome", 'Corbel', FontWeight.w400)),
+                  Transform.translate(
+                      offset: Offset(35, 295),
+                      child: getText(23, 0, 0, "Let\'s get started", 'Segoe UI',
+                          FontWeight.w400)),
+                  Transform.translate(
+                      offset: Offset(25, 370),
+                      child: ButtonTapped(
                           height: 56,
                           width: 305,
                           child: SizedBox(
-                            width: 156.0,
+                            width: 300.0,
                             child: TextField(
-                              decoration:InputDecoration(
-                                contentPadding: EdgeInsets.only(left: 10,top: 17),
-                                labelText:'Email',
-                                labelStyle: TextStyle(
-                                ),
+                              decoration: InputDecoration(
+                                contentPadding:
+                                EdgeInsets.only(left: 25, top: 17),
+                                labelText: 'your email here',
                                 border: InputBorder.none,
                               ),
                               keyboardType: TextInputType.emailAddress,
                               textInputAction: TextInputAction.done,
                             ),
-                          )
-                      )
-                  ),
-                  Positioned(
-                    top: 490,
-                    left: 25,
-                    child:ButtonTapped(
+                          ))),
+                  Transform.translate(
+                    offset: Offset(25, 465),
+                    child: ButtonTapped(
                         height: 56,
                         width: 305,
-                        child:  SizedBox(
-                          width: 156.0,
-                          child: TextField(
-                            decoration:InputDecoration(
-                              contentPadding: EdgeInsets.only(left: 10,top: 17),
-                              labelText:'Password',
-                              border: InputBorder.none,
-                            ),
-                            keyboardType: TextInputType.emailAddress,
-                            textInputAction: TextInputAction.done,
+                        child: SizedBox(
+                          width: 300.0,
+                          child: ListTile(
+                              title: TextField(
+                                decoration: InputDecoration(
+                                  contentPadding: EdgeInsets.only(left: 10, top: 17),
+                                  labelText: 'your password here',
+                                  border: InputBorder.none,
+                                ),
+                                keyboardType: TextInputType.visiblePassword,
+                                textInputAction: TextInputAction.done,
+                              ),
+                              trailing: Icon(
+                                Icons.remove_red_eye,
+                              )
                           ),
-                        )
+                        )),
+                  ),
+                  Transform.translate(
+                      offset: Offset(25, 535),
+                      child: Row(
+                        children: [
+                          Icon(Icons.beenhere),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          getText(15, 0, 0, "Accept terms and conditions", 'Segoe UI',
+                              FontWeight.w300),
+                        ],
+                      )
+                  ),
+                  Transform.translate(
+                    offset: Offset(90, 630),
+                    child: InkWell(
+                      child: SplashButton(
+                        height: 62,
+                        width: 195,
+                        child: getText(28, 40, 0, "Sign up", 'Corbel',
+                            FontWeight.w500),
+                      ),
+                      onTap: (){
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => CustomLogin())
+                        );
+                      },
                     ),
                   ),
-
+                  Transform.translate(
+                    offset: Offset(90, 710),
+                    child:  InkWell(
+                      onTap: (){
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => CustomLogin())
+                        );
+                      },
+                      child: getText(24, 37, 0, "Sign in", 'Corbel',
+                          FontWeight.w300),
+                    ),
+                  )
                 ],
               ),
-            )));
+            ),
+          ),
+        )
+    );
   }
+
 }
